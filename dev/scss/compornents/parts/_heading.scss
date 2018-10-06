@@ -1,0 +1,32 @@
+.heading {
+	text-align: center;
+	&::after {
+		content: "";
+		display: block;
+		width: 30px;
+		margin: 0 auto;
+		background-color: color(heading_pink);
+	}
+	@include mq(sp){
+		&_main {
+			font-size: 20px;
+		}
+		&_sub {
+			font-size: fz(sp_xs);
+		}
+		&::after {
+			height: 6px;
+		}
+	}
+	@include mq(nonSp){
+		&_main {
+			font-size: 40px;
+		}
+		&_sub {
+			font-size: fz(sp_xs) * 2;
+		}
+		&::after {
+			height: 4px;
+		}
+	}
+}

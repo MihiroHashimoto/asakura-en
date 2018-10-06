@@ -1,0 +1,36 @@
+.card {
+	$root: &;
+	text-align: center;
+	&.icon {
+		@include mq(sp) {
+			display: table;
+			margin: 0 0 15px;
+			text-align: left;
+			width: 100%;
+			float: initial;
+			overflow: hidden;
+			#{$root} {
+				&_sub {
+					width: 30%;
+					display: table-cell;
+				}
+				&_main {
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	&_list {
+		overflow: hidden;
+	}
+	&_sub {
+		@for $number from 1 through 3 {
+			&.icon#{$number} {
+				height: 80px;
+				background: url('../../../../assets/images/welfare/welfare_icon_sp_0#{$number}.gif') center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}

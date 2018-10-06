@@ -1,0 +1,31 @@
+.l-left {
+	float: left;
+}
+.l-right {
+	float: right;
+}
+.l-wrapper {
+	padding: 25px 0 50px;
+	@include mq(nonSp){
+		padding: 70px 0 100px;
+	}
+}
+.l-inner {
+	width: 90%;
+	margin: 0 auto;
+	@include mq(nonsp){
+		width: 70%;
+	}
+}
+
+@for $value from 2 through 6 {
+	$width: round(100% / $value) - 1;
+	.l-col#{$value} {
+		float: left;
+		width: $width;
+		margin-right: (100% - ($width * $value)) / ($value - 1);
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP:300,400,500,700&subset=japanese');
+
+// フォントサイズ
+@function fz($key) {
+	@return map-get($font-size, $key)
+};
+// フォントサイズをrem式に変換
+@function fz_base($size) {
+	$basic: 14;
+	@return $size / $basic * 1rem;
+};
+
+// レタースペース
+@function ls($key) {
+	@return map-get($letter-spacing, $key)
+};
+
+// ラインヘイト
+@function lh($key) {
+	@return map-get($line-height, $key)
+};
+
+html {
+	font-family: 'Noto Sans JP', 'sans-serif';
+	color: color(power_blue);// テキストカラー
+
+	// フォント(ベース)
+	$basic: 14;//わかりやすくするために変数使用
+	font-size: $basic + px;
+	font-weight: 400;
+
+	@include mq(sp) {
+		letter-spacing: ls(sp_l);
+		line-height: lh(sp_m);
+	}
+	@include mq(nonSp) {
+		font-size: fz(pc_m);
+		letter-spacing: ls(pc_l);
+		line-height: lh(pc_m);
+	}
+}
+.kozuka {
+	font-family: "kozuka-gothic-pr6n";// weight: R;
+}
+.fot {
+	font-family: "fot-tsukuardgothic-std";// 主にheaderとmainVisで使用 weight: 300, 400, 500, 700;
+}
+.lato {
+	font-family: 'Lato';// 主に英語で使用 weight: R;
+}

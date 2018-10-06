@@ -1,0 +1,92 @@
+// メディアクエリー
+@mixin mq($size) {
+
+$sp: 768px;
+$tablet: 910px;
+$pc: 1280px;
+	@if $size == "sp" {
+		@media only screen and (max-width: $sp - 1) {@content;}
+	}
+	@else if $size == "nonSp" {
+		@media only screen and (min-width: $sp) {@content;}
+	}
+	@else if $size == "tablet" {
+		@media only screen and (min-width: $sp) and (max-width: $pc - 1) {@content;}
+	}
+	@else if $size == "bp" {
+		@media only screen and (min-width: $tablet) {@content;}
+	}
+	@else if $size == "pc" {
+		@media only screen and (min-width: $pc) {@content;}
+	}
+}
+
+// よく使うプロパティー
+@mixin set($width: 100%, $height: auto, $padding: null, $margin: null) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+	padding: $padding;
+}
+
+// フォント
+@mixin font($size, $letter-spacing: null, $weight: 400, $transform: null, $line-height: null) {
+
+// 変数はvariableに記載
+
+	@if type-of($size) == number and $transform == "up" {
+		font-size: fz_base($size);// @functionへ
+		font-weight: $weight;
+		line-height: $line-height;
+		letter-spacing: $letter-spacing;
+		text-transform: uppercase;
+		// 例： @include font(16, cap);
+		// -> font-size: 16px; text-transform: uppercase;
+	}
+	@else if type-of($size) == string and $transform == "up" {
+		font-size: fz($size);
+		font-weight: $weight;
+		line-height: $line-height;
+		letter-spacing: $letter-spacing;
+		text-transform: uppercase;
+	}
+	@else if type-of($size) == number {
+		font-size: fz_base($size);
+		font-weight: $weight;
+		line-height: $line-height;
+		letter-spacing: $letter-spacing;
+	}
+	@else if type-of($size) == string {
+		font-size: fz($size);
+		font-weight: $weight;
+		line-height: $line-height;
+		letter-spacing: $letter-spacing;
+	}
+}
+
+// ボーダー
+@mixin bd($position: null, $color: rgba(color(light_pink), 1), $height: 1px, $style: solid) {
+
+$value: $color $height $style;// 値の代入
+	@if type-of($position) == string{
+		border-#{$position}: $value;// @include bd($position)
+	}
+	@else {
+		border: $value;
+	}
+}
+
+// カラー
+// ===========================
+// class名ごとにbgcとcolorを生成
+// ===========================
+@each $color, $value in $colors {
+	.bgc_#{$color} {
+		background-color: ($value);
+	}
+}
+@each $color, $value in $colors {
+	.#{$color} {
+		color: ($value);
+	}
+}

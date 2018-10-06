@@ -1,0 +1,9 @@
+// カラー
+@function color($key) {
+	@return map-get($colors, $key)
+};
+
+// サイズ
+@function sz($key) {
+	@return map-get($sizes, $key)
+};

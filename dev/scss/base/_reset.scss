@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+// ===========================
+// Reset
+// ===========================
+@import './lib/sanitize';
+
+:root, html, body, main {
+	background-color: color(base_white);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, ul, dl, dd, p, button {
+	margin: 0;
+	padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+button {
+	border: none;
+}
+img {
+	width: 100%;
+}
+// ブレイクポイント用
+.forPc {
+	@include mq(sp) {
+		display: none;
+	}
+}
+.forSp {
+	@include mq(nonSp) {
+		display: none;
+	}
+}

@@ -1,0 +1,50 @@
+// カラー
+$colors: (
+	base_white: #F5F5F5,
+	assort_pink: #eb6baa,
+	accent_blue: #2a236b,
+
+	thin_pink: #FDF5F8,
+	light_white: #fff,
+	light_pink: #f48eab,
+	light_blue: #5265c1,
+	light_black: rgba(#000, .5),
+	dark_pink: #920783,
+	dark_blue: #041a85,
+	heading_pink: rgba(#dd5a7f, .5),
+	power_pink: #fc3d6f,
+	power_blue: #111733,
+);
+
+// フォントサイズ
+$font-size: (
+	sp_xs   : 12px,
+	sp_s   : 13px,
+	sp_l   : 16px,
+	sp_xl   : 18px,
+	pc_xs: 12px,
+	pc_s: 14px,
+	pc_m: 16px,
+	pc_l: 18px,
+	pc_xl: 20px,
+	pc_xxl: 24px,
+	pc_xxxl: 32px,
+);
+
+// レタースペース
+$letter-spacing: (
+	sp_s: 0.025em,
+	sp_l: 0.05em,
+	pc_s: 0.05em,
+	pc_l: 0.1em,
+);
+
+// ラインヘイト
+$line-height: (
+	sp_m: 1.5,
+	sp_l: 1.75,
+	pc_xs: 1.5,
+	pc_s: 1.85,
+	pc_m: 2,
+	pc_l: 2.25,
+);
