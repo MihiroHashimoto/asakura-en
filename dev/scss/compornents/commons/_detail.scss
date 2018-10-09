@@ -1,0 +1,109 @@
+.detail {
+	$root: &;
+	line-height: lh(sp_l);
+	&.layer {
+		padding: 15px 0;
+	}
+	&__border {
+		@include mq(nonSp) {
+			margin-bottom: 20px;
+			vertical-align: top;
+			&.l-col2 {
+				&:nth-child(odd) {
+					margin-right: 1.3%;
+				}
+			}
+			ul {
+				&.isOpen {
+					@include mq(nonSp) {
+						@include bd($color: #808080);
+						border-top: none;
+					}
+					@include mq(bp) {
+						@include bd(bottom, $color: #808080);
+					}
+				}
+			}
+		}
+		@include mq(sp) {
+			&:last-child {
+				@include bd(bottom, #808080);
+			}
+			&.l-col2 {
+				width: 100%;
+			}
+		}
+	}
+	&__wrapper {
+		@include mq(nonSp) {
+			width: 95%;
+			margin: 0 auto;
+		}
+	}
+	&__item {
+		display: table;
+		width: 100%;
+		&__inner {
+			padding: 2.5% 0;
+		}
+		&.light_black_border {
+			@include bd(top, $color: rgba(color(light_black), .2));
+			&:last-of-type {
+				@include bd(bottom,  $color: rgba(color(light_black), .2));
+			}
+			#{$root}__ttl {
+				text-align: center;
+			}
+		}
+	}
+	&__ttl {
+		@include mq(nonSp) {
+			width: 150px;
+		}
+		@include mq(bp) {
+			width: 200px;
+		}
+		font-weight: 500;
+		display: table-cell;
+		width: 100px;
+		@include mq(sp) {
+			font-size: fz(sp_xs);
+		}
+		&.bgc_light_black {
+			background-color: rgba(color(light_black), .1);
+			text-align: center;
+			padding: 15px 10px;
+			& + #{$root} {
+				&__txt {
+					padding: 15px 0 15px 20px;
+				}
+			}
+		}
+	}
+	&__txt {
+		display: table-cell;
+		@include mq(sp) {
+			font-size: fz(sp_xs);
+		}
+		@include mq(nonSp) {
+			overflow: hidden;
+		}
+	}
+	&__subTxt {
+		@include mq(sp) {
+			margin-left: 10px;
+		}
+	}
+	&__icon {
+		@include mq(nonSp) {
+			float: left;
+			margin-left: 20px;
+			&:nth-child(2) {
+				margin-left: 0;
+			}
+		}
+	}
+	&.isOpen {
+		display: none;
+	}
+}

@@ -1,31 +1,29 @@
-.l-left {
-	float: left;
-}
-.l-right {
-	float: right;
-}
-.l-wrapper {
-	padding: 25px 0 50px;
-	@include mq(nonSp){
-		padding: 70px 0 100px;
-	}
-}
 .l-inner {
-	width: 90%;
+	width: 92%;
 	margin: 0 auto;
-	@include mq(nonsp){
-		width: 70%;
+	overflow: hidden;
+	@include mq(nonSp) {
+		width: 100%;
+		max-width: 910px;
+		margin: 0 auto;
+		overflow: hidden;
 	}
 }
 
-@for $value from 2 through 6 {
-	$width: round(100% / $value) - 1;
+// 例外
+.section__inner.l-inner.staff {
+	overflow: visible;
+}
+
+.map__inner.l-inner {
+	@include mq(sp) {
+		width: 100%;
+	}
+}
+
+@for $value from 2 through 5 {
 	.l-col#{$value} {
-		float: left;
-		width: $width;
-		margin-right: (100% - ($width * $value)) / ($value - 1);
-		&:last-child {
-			margin-right: 0;
-		}
+		display: inline-block;
+		width: round(100% / $value) - 1;
 	}
 }

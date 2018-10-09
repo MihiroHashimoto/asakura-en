@@ -1,0 +1,111 @@
+.header {
+	$root: &;
+	@include mq(bp) {
+		height: 80px;
+		padding: 0 30px;
+	}
+	@include set($height: 60px);
+	display: table;
+	overflow: hidden;
+	&__head {
+		display: table-cell;
+		vertical-align: middle;
+		overflow: hidden;
+		@include mq(sp) {
+			width: 85%;
+			padding-left: 2.5%;
+		}
+	}
+	&__logo {
+		@include mq(tablet) {
+			padding-top: 10px;
+		}
+		float: left;
+	}
+	&__ttl {
+		@include mq(tablet) {
+			font-size: 20px;
+		}
+		@include font(sp_l, $weight: bold, $transform: up);
+		font-family: serif;
+		float: left;
+		padding: 8px 0 0 10px;
+	}
+	&__body {
+		@media only screen and (max-width: 911px) {
+			width: 15%;
+		}
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&__menu {
+		overflow: hidden;
+	}
+	&__btn {
+		@include mq(bp) {
+			display: none;
+		}
+		@include set($height: 60px);
+		position: relative;
+		display: block;
+		background-color: color(assort_pink);
+		border: none;
+		outline: none;
+		text-indent: -9999px;
+		span {
+			@include set(60%, 2px, $margin: 0 auto);
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			content: "";
+			background-color: color(base_white);
+			border-radius: 2px;
+			&:first-of-type {
+				top: 18px;
+				transition: all .4s;
+			}
+			&:nth-of-type(2) {
+				top: 18px + 2px + (18 / 2);
+				transition: all .4s;
+			}
+			&:last-of-type {
+				bottom: 18px;
+				transition: all .4s;
+			}
+		}
+	}
+	&__nav {
+		@media only screen and (max-width: 911px) {
+			display: none;
+		}
+		@include mq(nonSp) {
+			float: right;
+		}
+	}
+	&__item {
+		font-size: fz(pc_s);
+		font-size: 13px;
+		font-weight: 500;
+		display: inline-block;
+		margin-right: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			#{$root} {
+				&__txt {
+					@include bd(bottom, rgba(color(light_black), .2), 2px);
+					&.isCurrent {
+						@include bd(bottom, $color: color(light_black), $height: 2px);
+					}
+				}
+			}
+		}
+	}
+	&__txt {
+		&.isCurrent {
+			@include bd(bottom, $color: color(light_black), $height: 2px);
+		}
+	}
+}

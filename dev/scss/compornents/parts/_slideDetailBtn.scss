@@ -1,0 +1,55 @@
+.slideDetailBtn {
+	$root: &;
+	background-color: color(light_white);
+	overflow: hidden;
+	cursor: pointer;
+	@include bd(top, $color: #808080);
+	@include mq(nonSp) {
+		@include bd($color: #808080);
+	}
+	@include mq(bp) {
+		@include bd($color: #808080);
+	}
+	@include mq(sp) {
+		padding: 12.5px 0;
+		&:last-of-type {
+			@include bd(bottom, $color: #808080);
+		}
+	}
+	&__ttl {
+		@include mq(nonSp) {
+			font-size: fz(pc_xl);
+			line-height: 1;
+		}
+		float: left;
+		padding-top: 10px;
+	}
+	&__btn {
+		outline: none;
+		float: right;
+		padding: 10px 8px;
+		font-size: fz(sp_xs);
+	}
+	&__arrow {
+		margin-left: 6px;
+	}
+	&.l-wrapper {
+		@include mq(nonSp) {
+			padding: 25px 22px;
+		}
+	}
+	&.isOpen {
+		@include mq(nonSp) {
+			border-left: none;
+			border-right: none;
+		}
+		@include mq(sp) {
+			@include bd(bottom, $style: dotted, $color: rgba(color(light_black), .2));
+		}
+		#{$root} {
+			&__btn {
+				background-color: color(accent_blue);
+			}
+		}
+	}
+}

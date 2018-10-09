@@ -1,0 +1,121 @@
+.entrySheet {
+	$root: &;
+	&__inner {
+		@include mq(nonSp) {
+			padding-bottom: 35px;
+		}
+		padding-bottom: 30px;
+	}
+	&__item {
+		@include mq(nonSp) {
+			@include bd(top, $color: rgba(color(light_black), .2));
+			line-height: 2.5;
+			padding: 3% 20% 3% 5%;
+			overflow: hidden;
+			br {
+				display: none;
+			}
+		}
+		@include mq(sp) {
+			margin-bottom: 35px;
+		}
+	}
+	&__ttl {
+		@include mq(nonSp) {
+			font-size: fz(pc_l);
+			&.l-left {
+				float: left;
+			}
+		}
+		@include mq(sp) {
+			font-size: fz(sp_l);
+			font-weight: 500;
+		}
+	}
+	&__attention {
+		@include bd($color: color(power_pink));
+		font-size: fz(sp_xs);
+		padding: 2.5px 5px;
+		margin-left: 20px;
+	}
+	&__txtArea {
+		@include mq(nonSp) {
+			display: inline;
+			margin-top: 0;
+			width: 360px;
+			float: right;
+			&[name="addressNumber"] {
+				width: 180px;
+			}
+			&[name="address"] {
+				margin-top: 2%;
+			}
+			&[name="select"] {
+				font-size: fz(pc_s);
+			}
+		}
+		@include mq(sp) {
+			&[name="addressNumber"] {
+				width: 70%;
+			}
+		}
+		display: block;
+		width: 100%;
+		height: 48px;
+		margin-top: 15px;
+		padding: 2px 10px;
+		&[name="message"] {
+			height: 120px;
+			font-size: fz(sp_xs);
+		}
+	}
+	&__addressNumber {
+		@include mq(nonSp) {
+			float: right;
+			position: relative;
+			padding-right: 20%;
+			padding-left: 6%;
+		}
+	}
+	&__addressIcon {
+		@include mq(nonSp) {
+			position: absolute;
+			top: auto;
+			left: 0;
+		}
+		@include mq(sp) {
+			float: left;
+			margin-top: 15px;
+		}
+		margin-right: 15px;
+		display: inline-block;
+		@include set(21px,20px);
+	}
+	&__checkList {
+		@include mq(nonSp) {
+			float: right;
+			width: 360px;
+		}
+		@include mq(sp) {
+			margin-top: 15px;
+		}
+	}
+	&__checkBox {
+		@include mq(nonSp) {
+			font-size: fz(pc_s);
+		}
+		&:first-of-type {
+			margin-right: 5px;
+		}
+		[type="checkbox"] {
+			width: 14px;
+			height: 14px;
+		}
+	}
+	&__submit {
+		@include mq(nonSp) {
+			max-width: 360px;
+			margin: 45px auto 0;
+		}
+	}
+}

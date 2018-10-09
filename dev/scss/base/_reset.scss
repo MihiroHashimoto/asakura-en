@@ -28,9 +28,6 @@ a {
 button {
 	border: none;
 }
-img {
-	width: 100%;
-}
 // ブレイクポイント用
 .forPc {
 	@include mq(sp) {

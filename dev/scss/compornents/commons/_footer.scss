@@ -1,0 +1,19 @@
+.footer {
+	text-align: center;
+	&__heading {
+		font-size: fz(sp_xl);
+		padding: 40px 20px;
+	}
+	&__address {
+		font-size: fz(sp_xs);
+		margin-bottom: 20px;
+	}
+	&__btn {
+		@include set($width: 200px, $height: 40px, $margin: 0 auto);
+		margin-bottom: 35px;
+	}
+	&__copyright {
+		@include font(12, $transform: up);
+		padding: 10px 0;
+	}
+}

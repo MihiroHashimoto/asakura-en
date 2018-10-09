@@ -1,0 +1,174 @@
+.infoBtn {
+
+	%btn-before {// ＋背景色を記述
+		position: absolute;
+		top: 50%;
+		right: 0;
+		display: block;
+		content: "";
+		border-radius: 50%;
+		margin-top: -13px;
+		width: 26px;
+		height: 26px;
+	}
+	%btn-after {// ＋ボーダー色を記述
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-right: 8px;
+		display: block;
+		content: "";
+		margin-top: -7.5px;
+		width: 10px;
+		height: 10px;
+		transform: rotate(-45deg);
+	}
+	$root: &;
+	border: none;
+	width: 100%;
+	overflow: hidden;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+	@include mq(nonSp) {
+		display: inline-block;
+	}
+	// &__arrow {
+	// 	float: right;
+	// 	margin-right: 22px;
+	// 	@include mq(nonSp) {
+	// 		margin-right: 18px;
+	// 	}
+	// }
+	&__link {
+		display: block;
+	}
+	&.light_pink_border {
+		@include bd($height: 2px);
+		position: relative;
+		text-align: left;
+		padding: 15px;
+		padding-left: 20px;
+		@include mq(nonSp) {
+			padding: 10px;
+			padding-left: 20px;
+		}
+		#{$root} {
+			&__txt {
+				display: inline-block;
+				vertical-align: middle;
+				&:before {
+					@extend %btn-before;
+					right: 20px;
+					background-color: color(light_pink);
+				}
+				&:after {
+					@extend %btn-after;
+					right: 20px;
+					@include bd(left, color(light_white), 2px);
+					@include bd(bottom, color(light_white), 2px);
+				}
+			}
+		}
+	}
+	&.accent_blue_border {
+		#{$root}__txt {
+			display: inline-block;
+			vertical-align: middle;
+			padding-right: 40px;
+			position: relative;
+			&:before {
+				@extend %btn-before;
+				background-color: color(accent_blue);
+			}
+			&:after {
+				@extend %btn-after;
+				@include bd(left, color(light_white), 2px);
+				@include bd(bottom, color(light_white), 2px);
+			}
+		}
+		@include mq(nonSp) {
+			padding: 15px 0;
+		}
+		@include mq(sp) {
+			padding: 15px 0;
+			#{$root}__txt {
+				font-size: fz(sp_l);
+				font-weight: 500;
+				margin-right: 30px;
+			}
+		}
+		@include bd($color: color(accent_blue), $height: 2px);
+	}
+	&.bgc_light_pink {
+		height: 100%;
+		transition: all .4s;
+		&:hover {
+			opacity: .8;
+		}
+		#{$root} {
+			&__txt {
+				display: inline-block;
+			}
+			&__window {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 5px;
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+	&.bgc_accent_blue {
+		text-align: center;
+		transition: all .4s;
+		padding: 15px 0;
+		&:hover {
+			opacity: .8;
+		}
+		@include mq(nonSp) {
+			vertical-align: middle;
+			padding: 10px 0;
+		}
+		@include mq(sp) {
+			margin-bottom: 20px;
+		}
+		#{$root} {
+			&__txt {
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				padding-right: 50px;
+				&:before {
+					@extend %btn-before;
+					background-color: color(light_white);
+				}
+				&:after {
+					@extend %btn-after;
+					@include bd(left, color(accent_blue), 2px);
+					@include bd(bottom, color(accent_blue), 2px);
+				}
+				@include mq(sp) {
+					text-align: left;
+				}
+			}
+			&__arrow {
+				float: initial;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 0 0 15px;
+				@include mq(nonSp) {
+					border-top: 12px;
+					margin-left: 20px;
+				}
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

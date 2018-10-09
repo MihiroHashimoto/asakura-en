@@ -1,0 +1,144 @@
+.tab {
+	$root: &;
+	@include mq(nonSp) {
+		display: inline-block;
+		text-align: center;
+		width: 32%;
+		vertical-align: top;
+		margin-right: (100% - 96%) / 3;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__wrapper {
+			width: 100%;
+			padding-top: 20px;
+			margin-bottom: 40px;
+			font-size: fz(pc_s);
+			&.isActive {
+				@include bd(bottom, $height: 4px);
+			}
+		}
+		&__panels {
+			width: 95%;
+			margin: 0 auto;
+			padding-bottom: 40px;
+		}
+		&__panel {
+			overflow: hidden;
+			font-size: fz(pc_s);
+		}
+		&__detail {
+			&.l-left {
+				float: left;
+				width: 49%;
+			}
+			&.l-right {
+				float: right;
+				width: 49%;
+			}
+			&__wrapper {
+				margin-bottom: 40px;
+			}
+			&__ttl {
+				font-size: fz(pc_m);
+			}
+			&__item {
+				position: relative;
+			}
+		}
+		&.light_black_border {
+			position: relative;
+			&:nth-child(2) {
+				// padding-top: 10px;
+			}
+		}
+		&__txt {
+			&.power_blue {
+				display: block;
+				padding: 30px 0;
+				+ #{$root}__border {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				content: "";
+				width: 100%;
+				height: 8px;
+				background-color: rgba(color(light_pink), .5);
+				}
+			}
+			&.power_blue.isActive {
+				& + #{$root}__border {
+					background-color: color(light_pink);
+				}
+			}
+		}
+	}
+	@include mq(sp) {
+		width: 100%;
+		margin-bottom: 20px;
+		text-align: center;
+		display: inline-block;
+		&__wrapper {
+			margin-bottom: 10px;
+			&:nth-child(6) {
+				margin: 0;
+			}
+		}
+		&__txt {
+			display: block;
+			padding: 15px 56px;
+		}
+		&.light_black_border {
+			@include bd($color: rgba(color(light_black), .5), $height: 2px);
+		}
+		&.light_black_border.isActive {
+			@include bd($color: color(light_pink), $height: 2px);
+		}
+		&__detail {
+			&__wrapper {
+				padding-bottom: 50px;
+			}
+			&__head {
+				&:after {
+					display: block;
+					content: "";
+					width: 203px;
+					margin: 0 auto;
+					background-color: #111733;
+				}
+			}
+			&__item {
+					margin-bottom: 15px;
+			}
+			&__ttl {
+				font-weight: 500;
+					margin-bottom: 16px;
+			}
+			&__txt {
+				font-size: fz(sp_s);
+			}
+		}
+	}
+	&__panels {
+		margin-bottom: 90px;
+	}
+	&__detail {
+		&__head {
+			text-align: center;
+			font-weight: 500;
+			&:after {
+				display: block;
+				content: "";
+				width: 220px;
+				height: 2px;
+				margin: 0 auto;
+				background-color: #111733;
+			}
+		}
+		&__txt {
+			text-indent: 1.4rem;
+		}
+	}
+}

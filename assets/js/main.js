@@ -12,7 +12,7 @@ $(function() {
     // ============================
     // スライドショー
     // ============================
-    $('.slideshow').slick({
+    $('.mv').slick({
         autoplay: true,
         autoplaySpeed: 7000,
         pauseOnHover: false,
@@ -30,14 +30,17 @@ $(function() {
     });
     $('#staffSlide').slick({
         // asNavFor:'.slideshow__thumbs',
-        fade: true,
-        cssEase: 'ease-in',
+        fade: false,
+        cssEase: 'ease-out',
         focusOnSelect: true,
         accessibility: false,
         arrows: true,
 
         responsive:[{
-                breakpoint: 767,
+                breakpoint: 1023,
+                settings: {
+                    arrows: false,
+                }
             },
         ]
     });
@@ -46,10 +49,12 @@ $(function() {
         focusOnSelect: true,
     	accessibility: false,
     	arrows: true,
-        slidesToShow:5,
+        centerMode: true,
+        centerPadding: '10%',
+        slidesToShow: 3,
 
 	    responsive:[{
-	            breakpoint: 767,
+	            breakpoint: 1023,
                 settings: {
                     arrows: false,
                 }
@@ -57,8 +62,10 @@ $(function() {
 	    ]
     });
     $('#educationSlide').slick({
-        // autoplay: true,
-        cssEase: 'ease-in',
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        speed: 5000,
         accessibility: false,
         arrows: false,
         centerMode: true,
@@ -109,6 +116,8 @@ $(function() {
         $this.addClass('isActive');
         $tabBorder.removeClass('isActive');
         $this.next().addClass('isActive');
+        $tabList.removeClass('isActive');
+        $this.closest('.tab').addClass('isActive');
 
         $tabPanels.hide();
         $($this.attr('href')).show();
@@ -116,4 +125,25 @@ $(function() {
 
         $tabAnchor.eq(0).trigger('click');
     });
+    // ============================
+    //        aタグのスムーススクロール
+    // ============================
+    $('a[href^="#"]').click(function(){
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+
+        if (href == "#" || href == "") {
+            var target = $('html');
+        } else if (href == "#detail1" || href == "#detail2" || href == "#detail3") {
+            return;
+        } else {
+            var target = $(href);
+        }
+
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return felse;
+    });
+
 });

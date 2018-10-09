@@ -1,0 +1,36 @@
+.introduce {
+	@include mq(sp) {
+		padding: 30px 20px;
+	}
+	padding: 100px 0 35px 0;
+	&__thumb {
+		@include mq(nonSp) {
+			width: 45%;
+			max-width: 320px;
+			float: left;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&__body {
+		@include mq(nonSp) {
+			width: 55%;
+			float: right;
+			letter-spacing: ls(pc_s);
+		}
+		@media only screen and (min-width: 910px) {
+			width: 60%;
+		}
+	}
+	&__heading {
+		@include mq(nonSp) {
+			font-size: fz(pc_xxl);
+			line-height: lh(pc_xs);
+			margin-bottom: 30px;
+		}
+		@include mq(sp) {
+			padding: 25px 0;
+		}
+	}
+}

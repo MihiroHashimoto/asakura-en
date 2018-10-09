@@ -1,0 +1,54 @@
+.map {
+	img {
+		width: 100%;
+	}
+	&__head {
+		@include mq(nonSp) {
+			overflow: hidden;
+			padding-top: 30px;
+		}
+		@include mq(sp) {
+			padding: 15px 10px;
+		}
+	}
+	&__mainAreaTxt {
+		padding-bottom: 10px;
+		@include mq(nonSp) {
+			padding-left: 30px;
+			float: left;
+			font-size: fz(pc_xl);
+		}
+	}
+	&__subAreaTxt {
+		line-height: 1.6;
+		@include mq(nonSp) {
+			float: left;
+			padding: 7.5px 0 0 15px;
+		}
+	}
+	&__body {
+		@include mq(nonSp) {
+			padding: 20px 30px;
+		}
+		margin-bottom: 25px;
+		&:after {
+			display: block;
+			width: 100%;
+			height: 10px;
+			content: "";
+			background-color: color(light_white);
+		}
+	}
+	&__foot {
+		@include mq(sp) {
+			padding-bottom: 50px;
+		}
+		padding-bottom: 75px;
+		text-align: center;
+	}
+	&__txt {
+		@include mq(nonSp) {
+			font-size: fz(pc_s);
+		}
+	}
+}

@@ -1,0 +1,158 @@
+.section {
+	$root: &;
+	&__inner {
+		@include mq(nonSp) {
+			padding-bottom: 100px;
+		}
+	}
+	&__ttl {
+		@include mq(nonSp) {
+			font-size: fz(pc_xxl);
+			line-height: lh(pc_xs);
+			padding-bottom: 20px;
+		}
+	}
+	&__supplement {
+		padding: 30px 0;
+		@include mq(sp) {
+			padding-top: 0;
+			padding-bottom: 20px;
+		}
+	}
+	&__main {
+		overflow: hidden;
+	}
+	&__body__wrapper {
+		@include mq(nonSp) {
+			padding: 40px 0 60px;
+			overflow: hidden;
+		}
+		@include mq(sp) {
+			padding: 20px 0;
+		}
+	}
+	&__body {
+		@include mq(nonSp) {
+			&.l-left {
+				width: 48.5%;
+				float: left;
+			}
+			&.l-right {
+				width: 48.5%;
+				float: right;
+			}
+		}
+	}
+	&__table {
+		@include mq(nonSp) {
+			background-color: color(light_white);
+		}
+	}
+	&__list {
+		@include mq(sp) {
+			padding-bottom: 25px;
+		}
+		padding-bottom: 70px;
+	}
+	&__thumb {
+		@include mq(nonSp) {
+			&.l-left {
+				width: 45%;
+				max-width: 320px;
+				float: left;
+			}
+			& + #{$root}__body.l-right {
+				float: right;
+				width: 55%;
+				padding: 0;
+			}
+		}
+		@media only screen and (min-width: 910px) {
+			& + #{$root}__body.l-right {
+				width: 60%;
+			}
+		 }
+		@include mq(sp) {
+			padding:0 0 20px;
+		}
+		&.addCaption {
+			padding-top: 15px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&__txt {
+		@include mq(nonSp) {
+			&.fontSmall {
+				font-size: fz(pc_s);
+				letter-spacing: ls(pc_s);
+				line-height: lh(pc_s);
+				padding: 10px 0 5px;
+			}
+		}
+		@include mq(sp) {
+			padding-bottom: 15px;
+			&.question {
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&__name {
+		@include mq(nonSp) {
+			font-size: fz(pc_s);
+		}
+		width: 100%;
+		text-align: right;
+		&Item {
+			@include mq(nonSp) {
+				margin-right: 20px;
+			}
+			margin-left: 10px;
+		}
+		img {
+			@include mq(nonSp) {
+				max-width: 235.2px;
+			}
+			@include mq(sp) {
+				max-width: (235.2px / 2);
+			}
+		}
+	}
+	&__infoTxt {
+		@include mq(nonSp) {
+			font-size: fz(pc_s);
+			line-height: 1;
+			position: absolute;
+			top: 0;
+			&:first-child {
+				left: 0;
+			}
+		}
+		@include mq(tablet) {
+			&.l-right {
+				left: 4%;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width: 910px) {
+			&.l-right {
+				left: 0;
+			}
+		}
+		@include mq(sp) {
+			padding-bottom: 20px;
+		}
+		text-align: center;
+	}
+	&__foot {
+		@include mq(nonSp) {
+			&.l-right {
+				float: right;
+				margin-top: 15px;
+			}
+		}
+		@include mq(sp) {
+			padding-bottom: 30px;
+		}
+	}
+}

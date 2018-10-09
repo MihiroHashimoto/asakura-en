@@ -5,223 +5,1307 @@
 	<title>あさくら苑</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://use.typekit.net/qte4tdd.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </head>
 <body>
-	<header class="header bgc_light_white" id="top">
-		<div class="header_head l-left">
-			<a href="#top">
-				<div class="header_logo"><img src="assets/images/img_logo_asakura.gif" alt=""></img></div>
-				<h1 class="header_ttl">ASAKURA GROUP</h1>
-			</a>
+	<header class="header bgc_light_white">
+		<div class="header__head">
+			<div class="header__logo"><a href="#"><img src="assets/images/img_logo_asakura.gif" alt="あさくら苑のロゴ"></a></div>
+			<div class="header__ttl">asakura group</div>
 		</div>
-		<div class="header_body l-right">
-			<div class="header_menu">
-				<nav class="header_nav forSp bgc_assort_pink">
-					<button class="header_btn bgc_assort_pink" id="spMenu">
-						menu
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-				</nav>
-				<nav class="header_nav forPc">
-					<ul class="header_nav_list">
-						<li class="header_nav_item l-col5"><a href="#">メッセージ</a></li>
-						<li class="header_nav_item l-col5"><a href="#">先輩インタビュー</a></li>
-						<li class="header_nav_item l-col5"><a href="#">福利厚生</a></li>
-						<li class="header_nav_item l-col5"><a href="#">勤務地</a></li>
-						<li class="header_nav_item l-col5"><a href="#">募集要項</a></li>
-						<li class="header_nav_item l-col5"><a href="#">人材育成</a></li>
+		<div class="header__body">
+			<div class="header__menu">
+				<button class="header__btn">
+					menu
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="header__nav forPc" id="pcNav">
+					<ul class="header__list">
+						<li class="header__item"><a class="header__txt power_blue" href="#message">メッセージ</a></li>
+						<li class="header__item"><a class="header__txt power_blue" href="#staff">先輩職員インタビュー</a></li>
+						<li class="header__item"><a class="header__txt power_blue" href="#welfare">福利厚生</a></li>
+						<li class="header__item"><a class="header__txt power_blue" href="#map">勤務地</a></li>
+						<li class="header__item"><a class="header__txt power_blue" href="#requirements">募集要項</a></li>
+						<li class="header__item"><a class="header__txt power_blue" href="#education">人材育成</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
-	<main>
-		<div class="l-wrapper">
-			<ul class="slideshow forSp mv">
-				<li><img src="assets/images/mv/recruit_top_sp_01.jpg" alt=""></li>
-				<li><img src="assets/images/mv/recruit_top_sp_02.jpg" alt=""></li>
-				<li><img src="assets/images/mv/recruit_top_sp_03.jpg" alt=""></li>
-			</ul>
-			<ul class="slideshow forPc mv">
-				<li><img src="assets/images/mv/recruit_top_pc_01.jpg" alt=""></li>
-				<li><img src="assets/images/mv/recruit_top_pc_02.jpg" alt=""></li>
-				<li><img src="assets/images/mv/recruit_top_pc_03.jpg" alt=""></li>
-				<li><img src="assets/images/mv/recruit_top_pc_04.jpg" alt=""></li>
-			</ul>
-		</div>
-		<div class="l-wrapper bgc_light_whte">
-			<div class="contents l-inner"><!-- トップコンテンツ -->
-				<div class="contents_thumb">
-					<img class="forSp" src="assets/images/intro_sp.jpg" alt="">
-					<img class="forPc" src="assets/images/intro_pc.jpg" alt="">
-				</div>
-				<div class="contents_body">
-					<h3 class="contents_ttl forSp">快適で安心できる生活に<br>医療と介護のトータルケアを提供</h3>
-					<h3 class="contents_ttl forPc">家のような温かさと医療で支えられた安心。<br>医療と介護のトータルケアで実現します。</h3>
-					<p class="contents_txt">
-						あさくらグループは、介護を必要とされる高齢者の方に対して、<br>心から安心できる場所とサービスを提供する高齢者総合施設です。<br>
-						福井、横浜の全6地区で施設を運営しています。
-					</p>
-			</div><!-- /トップコンテンツ -->
+	<main class="main">
+		<div class="mainVis"><!-- メインスライドショー -->
+			<div class="slideshow">
+				<ul class="slideshow__slides mv forSp" >
+					<li class="slideshow__slide"><img src="assets/images/mv_sp_01.png" alt=""></li>
+					<li class="slideshow__slide"><img src="assets/images/mv_sp_02.png" alt=""></li>
+					<li class="slideshow__slide"><img src="assets/images/mv_sp_03.png" alt=""></li>
+				</ul>
+				<ul class="slideshow__slides mv forPc" >
+					<li class="slideshow__slide"><img src="assets/images/mv_pc_01.jpg" alt=""></li>
+					<li class="slideshow__slide"><img src="assets/images/mv_pc_02.jpg" alt=""></li>
+					<li class="slideshow__slide"><img src="assets/images/mv_pc_03.jpg" alt=""></li>
+				</ul>
 			</div>
 		</div>
-		<div class="l-wrapper bgc_light_whte">
-			<section class="section l-inner">
-				<div class="heading">
-					<h2 class="heading_main">メーセージ</h2>
-					<p class="heading_sub">MESSAGE</p>
+		<div class="introduce bgc_light_white"><!-- メインスライドショーのすぐ下 -->
+			<div class="l-inner">
+				<div class="introduce__thumb addCaption">
+					<img class="forPc" src="assets/images/gaikan_001.jpg" alt="施設紹介">
+					<img class="forSp" src="assets/images/intro_sp.jpg" alt="施設紹介">
 				</div>
-				<div class="contents">
-					<h3 class="contents_ttl forSp">あさくらグループは、<br>人と自分の「尊厳」を守り育てる職員を求めています。</h3>
-					<div class="contents_thumb">
-						<img class="forSp" src="assets/images/message_sp.jpg" alt="">
-						<img class="forPc" src="assets/images/message_pc.jpg" alt="">
-					</div>
-					<div class="contents_body">
-						<p class="contents_txt">
-							「されて嫌なことはしない」人生の先輩たちに尊敬と思いやりをもって接する、当たり前のことが素直に実践できる方を求めています。<br>
-							そしてこれからの人生をどう生きるのか、そこに寄り添い、支える気持ちと実現に向けての行動力を備えた人になっていただきたいと考えています。<br>
-						</p>
-						<p class="contents_txt">
-							そのために必要となるのが、「学び」「表現し」「チームに貢献する」力です。日々変化する介護や福祉についての学習を進んで行い、<br>
-							得た知識や経験を現場に必要な形で表現し、共に働く仲間を尊重し、ミーティングを有意義なものにする努力を怠らず、皆で決めたことを守り、実践する。<br>
-							日々の細やかな努力が必要となることばかりですが、その一歩一歩を着実に歩んでいくことができる方と一緒に、理想のケアの実現を進めたいと望んでいます。<br>
-							そして、何より自身が健やかであること、周りだけでなく自分を大切にすることを忘れずに過ごせる方を求めています。
-						</p>
-					</div>
-					<div class="compornents_foot">
-						<div class="contents_name">
-							<div class="contents_txt l-left">
-								<span class="forSp">あさくら苑</span><span>法人部長</span>
-							</div>
-							<div class="l-right"><img src="assets/images/message_name.gif" alt="山本高之"></div>
-						</div>
-					</div>
+				<div class="introduce__body">
+					<h3 class="introduce__heading">
+						<span class="forSp">快適で安心できる生活に<br>医療と介護のトータルケアを提供</span>
+						<span class="forPc">家のような温かさと、医療で支えられた安心。<br>医療と介護のトータルケアで実現します。</span>
+					</h3>
+					<p class="introduce__txt">あさくらグループは、介護を必要とされる高齢者の方に対して様々なサービスを提供する高齢者総合施設です。福井、横浜の全6地区にて施設を運営しています。</p>
 				</div>
-			</section>
+			</div>
 		</div>
-		<div class="l-wrapper">
-			<section class="section l-inner">
+		<section class="section bgc_light_white" id="message">
+			<div class="section__inner l-inner">
 				<div class="heading">
-					<h2 class="heading_main">先輩の声</h2>
-					<p class="heading_sub">STAFF</p>
+					<h1 class="heading__main">メッセージ</h1>
+					<p class="heading__sub lato">message</p>
 				</div>
-				<div class="contents">
-					<div class="contents_thumb">
-						<ul class="" id="staffSlide">
-							<li><img src="assets/images/staff/img_staff_01.png" alt=""></li>
-							<li><img src="assets/images/staff/img_staff_02.png" alt=""></li>
-							<li><img src="assets/images/staff/img_staff_03.png" alt=""></li>
-							<li><img src="assets/images/staff/img_staff_04.png" alt=""></li>
-							<li><img src="assets/images/staff/img_staff_05.png" alt=""></li>
-						</ul>
+				<h3 class="section__ttl">あさくらグループは、<br>人と自分の『尊厳』を守り育てる職員を求めています。</h3>
+				<div class="section__main">
+					<div class="section__thumb l-left">
+						<img class="forPc" src="assets/images/message_001.jpg" alt="山本高之">
+						<img class="forSp" src="assets/images/message_sp.jpg" alt="山本高之">
 					</div>
-					<div class="contents_body">
-						<div class="contents_body_left">
-							<p class="contents_txt">ケアワーカーとして、入居者さまのお食事や入浴、排泄の介助など、支援が必要な方の日常生活をサポートしています。</p>
-							<p class="contents_question">あさくら苑を選んだ理由を教えてください。</p>
-							<p class="contents_txt">
-								あさくら苑を選んだ理由としては、施設見学の際に知った「自由な生活」の実現、「人権の尊重」という法人理念に共感したからです。これまでがどうだったかよりも、これからどうするかを考える、未来を重視する考え方にも惹かれました。
-							</p>
-							<p class="contents_question">実際に仕事をしてみて、どうでしたか？</p>
-							<p class="contents_txt">
-								入居者の方の中には言葉が不明瞭な方や、意思表示が難しい方もいらっしゃるので、コミュニケーションの取り方がわからないことも多かったのですが、先輩の対応を見ながら様々な入居者と関わるうちに徐々に慣れていきました。
-							</p>
-						</div>
-						<div class="contents_body_right">
-							<p class="contents_question">この仕事のやりがいを教えてください。</p>
-							<p class="contents_txt">
-								利用者の方から「ありがとう」というv 感謝の言葉や、「◯◯さんにお願いしたい」と言っていただけたとき、この仕事をしていてよかったと感じます。以前、体調を崩されて寝た状態が続き、床ずれをおこしてしまった利用者さまがいたのですが、スタッフ同士でアイデアを出し合い、ネガティブになりかけていた利用者さまに笑顔が戻ったときはとても嬉しかったです。
-							</p>
-							<p class="contents_question">今後の目標について教えてください。</p>
-							<p class="contents_txt">
-								利用者に寄り添った介護を行い、患者さまやご家族、スタッフから信頼されるケアワーカーになりたいと思っています。取得したい資格があるので、ステップアップに向けて日々勉強しています。
-							</p>
-						</div>
-					</div>
-					<div class="contents_foot">
-						<ul class="slideshow_thumb">
-							<li>
-								<img src="assets/images/staff/staff_s_01.png" alt="">
-								<img src="assets/images/staff/staff_s_02.png" alt="">
-								<img src="assets/images/staff/staff_s_03.png" alt="">
-								<img src="assets/images/staff/staff_s_04.png" alt="">
-								<img src="assets/images/staff/staff_s_05.png" alt="">
-							</li>
-						</ul>
+					<div class="section__body l-right">
+						<p class="section__txt">
+							「されて嫌なことはしない」人生の先輩たちに尊敬と思いやりをもって接する、当たり前のことが素直に実践できる方を求めています。そしてこれからの人生をどう生きるのか、そこに寄り添い、支える気持ちと行動力を備えた人になっていただきたいと考えています。
+						</p>
+						<p class="section__txt">
+							そのために必要となるのが、「学び」「表現し」「チームに貢献する」力です。日々変化する介護や福祉についての学習を進んで行い、得た知識や経験を現場に必要な形で表現し、共に働く仲間を尊重し、ミーティングを有意義なものにする努力を怠らず、皆で決めたことを守り、実践する。
+							<span class="forSp">日々の細やかな努力が必要となることばかりですが、その一歩一歩を着実に歩んでいくことが大きな力となります。</span>
+							<span class="forPc"><br>日々の細やかな努力が必要となることばかりですが、その一歩一歩を着実に歩んでいくことができる方と一緒に、理想のケアの実現を進めたいと望んでいます。<br>
+							そして、何より自身が健やかであること、周りだけでなく自分を大切にすることを忘れずに過ごせる方を求めています。</span>
+						</p>
 					</div>
 				</div>
-				<div class="l-wrapper">
-					<section class="welfare">
-						<div class="heading">
-							<h2 class="heading_main">福利厚生</h2>
-							<p class="heading_sub">WELFARE</p>
+				<div class="section__foot l-right">
+					<p class="section__name">
+						<span class="section__nameItem forSp">あさくら苑</span><span class="section__nameItem">法人本部長</span><span class="section__nameItem l-row"><img src="assets/images/message_name.gif" alt=""></span>
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="section__inner l-inner staff" id="staff">
+				<div class="heading">
+					<h1 class="heading__main">先輩の声</h1>
+					<p class="heading__sub lato">staff</p>
+				</div>
+				<div class="slideshow">
+					<ul class="slideshow__slides" id="staffSlide">
+						<li class="slideshow__slide sp"><img src="assets/images/staff/img_staff_01.png" alt=""></li>
+						<li class="slideshow__slide sp"><img src="assets/images/staff/img_staff_02.png" alt=""></li>
+						<li class="slideshow__slide sp"><img src="assets/images/staff/img_staff_03.png" alt=""></li>
+						<li class="slideshow__slide sp"><img src="assets/images/staff/img_staff_04.png" alt=""></li>
+						<li class="slideshow__slide sp"><img src="assets/images/staff/img_staff_05.png" alt=""></li>
+					</ul>
+				</div>
+				<ul class="section__body__wrapper">
+					<li class="section__body l-left">
+						<ul class="section__items">
+							<li class="section__item">
+								<p class="section__txt fontSmall">ケアワーカーとして、入居者様のお食事や入浴、排泄の介助など、支援が必要な方の日常生活サポートしています</p>
+							</li>
+							<li class="section__item">
+								<p class="section__txt question light_blue">あさくら苑を選んだ理由を教えてください。</p>
+								<p class="section__txt fontSmall response">あさくら苑を選んだ理由としては、施設見学の際に知った『自由な生活』の実現、『人権の尊重』という法人知念に共感したからです。これまでがどうだったかよりも、これからどうするかを考える、未来を重視する考え方にも惹かれました。</p>
+							</li>
+							<li class="section__item">
+								<p class="section__txt question light_blue">実際に仕事をしてみて、どうでしたか？</p>
+								<p class="section__txt fontSmall response">入居者の方の中には、言葉が不明瞭な方や、コミュニケーションの取り方がわからないことも多かったのですが、先輩の対応を見ながら様々な入居者と関わるうちに、徐々に慣れていきました。</p>
+							</li>
+						</ul>
+					</li>
+					<li class="section__body l-right">
+						<ul class="section__items">
+							<li class="section__item">
+								<p class="section__txt question light_blue">この仕事のやりがいを教えてください。</p>
+								<p class="section__txt fontSmall response">利用者の方から『ありがとう』という感謝の言葉や、『○○さんにお願いしたいと』と言っていただけたとき、この仕事をしていてよかったと感じます
+								。以前、体調を崩されて寝た状態が続き、床ずれを起こしてしまった利用者さまがいたのですが、スタッフ同士でアイデアを出し合い、ネガティヴになりかけていた利用者さまに笑顔が戻ったときはとても嬉しかったです。</p>
+							</li>
+							<li class="section__item">
+								<p class="section__txt question light_blue">今後の目標について教えてください</p>
+								<p class="section__txt fontSmall response">利用者に寄り添った介護を行い、患者さまやご家族、スタッフから信頼されるケアワーカーになりたいと思っています。取得したい資格があるので、ステップアップに向けて日々勉強しています。</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="slideshow">
+					<ul class="slideshow__thumbs">
+						<li class="slideshow__slide"><img src="assets/images/staff/staff_s_01.png" alt=""></li>
+						<li class="slideshow__slide"><img src="assets/images/staff/staff_s_02.png" alt=""></li>
+						<li class="slideshow__slide"><img src="assets/images/staff/staff_s_03.png" alt=""></li>
+						<li class="slideshow__slide"><img src="assets/images/staff/staff_s_04.png" alt=""></li>
+						<li class="slideshow__slide"><img src="assets/images/staff/staff_s_05.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section bgc_light_white" id="welfare">
+			<div class="l-inner">
+				<div class="heading">
+					<h1 class="heading__main">福利厚生</h1>
+					<p class="heading__sub lato">welfare</p>
+				</div>
+				<ul class="section__list l-row">
+					<li class="card l-col3">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_01.jpg" alt=""></div>
+						<p class="card__txt">職員旅行</p>
+					</li>
+					<li class="card l-col3">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_02.jpg" alt=""></div>
+						<p class="card__txt">職員間交流費の補助</p>
+					</li>
+					<li class="card l-col3">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_03.jpg" alt=""></div>
+						<p class="card__txt">入居者付き添い時の外食代補助</p>
+					</li>
+				</ul>
+				<ul class="section__list">
+					<li class="card l-culmn">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_icon_sp_01.gif" alt=""></div>
+						<div class="card__body">
+							<p class="card__txt">健康診断・予防接種の全額補助</p>
 						</div>
-						<ul class="card_list">
-							<li class="card l-col3">
-								<div class="card_sub"><img src="assets/images/welfare/img_welfare_sp_01.jpg" alt=""></div>
-								<p class="card_main">職員旅行</p>
-							</li>
-							<li class="card l-col3">
-								<div class="card_sub"><img src="assets/images/welfare/img_welfare_sp_02.jpg" alt=""></div>
-								<p class="card_main">職員間交流費の補助</p>
-							</li>
-							<li class="card l-col3">
-								<div class="card_sub"><img src="assets/images/welfare/img_welfare_sp_03.jpg" alt=""></div>
-								<p class="card_main">入居者付付き添い時の外食代補助</p>
-							</li>
-						</ul>
-						<ul class="card_list">
-							<li class="card l-col3 icon">
-								<div class="card_sub icon1"></div>
-								<p class="card_main">健康診断・予防接種の全額補助</p>
-							</li>
-							<li class="card l-col3 icon">
-								<div class="card_sub icon2"></div>
-								<p class="card_main"><span class="card_ttl">各種保険加入</span><br>健康保険、厚生年金保険、雇用保険、労災保険</p>
-							</li>
-							<li class="card l-col3 icon">
-								<div class="card_sub icon3"></div>
-								<p class="card_main"><span class="card_ttl">休暇制度有り</span><br>有給休暇、育児・介護休暇制度、産前産後休暇、その他</p>
-							</li>
-						</ul>
-					</section>
-					<div class="l-wrapper">
-						<section>
-							<div class="heading">
-								<h2 class="heading_main">勤務地</h2>
-								<p class="heading_sub">LOCATION</p>
-							</div>
-							<div class="map_wrapper">
-								<div class="map">
-									<div class="map_main">
-										<h4 class="map_ttl">福井エリア</h4><br class="forSp">
-										<p class="map_txt">六条地区／東郷地区／一乗地区／旭地区／麻生津・清明地区</p>
-									</div>
-									<div class="map_sub"><img src="assets/images/areaMap_sp_01.gif" alt=""></div>
-								</div>
-								<div class="map">
-									<div class="map_main">
-										<h4 class="map_ttl">横浜エリア</h4>
-										<p class="map_txt">青葉地区</p>
-									</div>
-									<div class="map_sub"><img src="assets/images/areaMap_sp_02.gif" alt=""></div>
-								</div>
-								<p class="map_supplement">配属については、ご希望を考慮の上決定致します。</p>
-							</div>
-						</section>
+					</li>
+					<li class="card l-culmn">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_icon_sp_02.gif" alt=""></div>
+						<div class="card__body">
+							<p class="card__txt">各種保険加入</p>
+							<p class="card__detail light_black">健康保険、厚生年金保険、雇用保険、労災保険</p>
+						</div>
+					</li>
+					<li class="card l-culmn">
+						<div class="card__thumb"><img src="assets/images/welfare/welfare_icon_sp_03.gif" alt=""></div>
+						<div class="card__body">
+							<p class="card__txt">休暇制度有り</p>
+							<p class="card__detail light_black">有給休暇、育児・介護休暇制度、産前産後休暇、その他</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class="location" id="map">
+			<div class="heading">
+				<h1 class="heading__main">勤務地</h1>
+				<p class="heading__sub lato">location</p>
+			</div>
+			<div class="l-inner map__inner">
+				<div class="map">
+					<div class="map__head bgc_light_white">
+						<h3 class="map__mainAreaTxt accent_blue">福井エリア</h3>
+						<p class="map__subAreaTxt">
+							<span>六条地区／東郷地区／一条地区／旭地区／麻生津・清明地区</span>
+						</p>
+					</div>
+					<div class="map__body bgc_light_white">
+						<div class="map__thumb forSp"><img src="assets/images/areaMap_sp_01.gif" alt=""></div>
+						<div class="map__thumb forPc"><img src="assets/images/areaMap_pc_01.gif" alt=""></div>
 					</div>
 				</div>
-			</section>
+				<div class="map">
+					<div class="map__head bgc_light_white">
+						<h3 class="map__mainAreaTxt accent_blue">横浜エリア</h3>
+						<p class="map__subAreaTxt"><span>青葉地区</span></p>
+					</div>
+					<div class="map__body bgc_light_white">
+						<div class="map__thumb forSp"><img src="assets/images/areaMap_sp_02.gif" alt=""></div>
+						<div class="map__thumb forPc"><img src="assets/images/areaMap_pc_02.gif" alt=""></div>
+					</div>
+					<div class="map__foot">
+						<p class="map__txt">配属については、ご希望を考慮の上決定致します。</p>
+					</div>
+				</div>
+			</div>
 		</div>
+		<section class="section bgc_light_white" id="requirements">
+			<div class="heading">
+				<h1 class="heading__main">募集要項</h1>
+				<p class="heading__sub lato">requirements</p>
+			</div>
+			<div class="l-inner requirements__wrapper">
+				<div class="requirements l-col2 l-left">
+				<h3 class="section__infoTxt"><a class="power_blue" href="#newGraduate">新卒採用はこちら</a></h3>
+					<ul class="requirements__list">
+						<li class="requirements__item l-col2">
+							<a class="infoBtn__link" href="#newGraduate">
+								<button class="infoBtn light_pink_border bgc_light_white">
+									<span class="infoBtn__txt">新卒で働く</span>
+								</button>
+							</a>
+						</li>
+						<li class="requirements__item rikunabiLogo l-col2">
+							<div>
+								<img class="forSp" src="assets/images/rikunabi_logo.gif" alt="">
+								<img class="forPc" src="assets/images/rikunabi_pc_logo.gif" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="requirements l-col2 l-right">
+				<h3 class="section__infoTxt l-right"><a class="power_blue" href="#career">キャリア採用はこちら</a></h3>
+					<ul class="requirements__list">
+						<li class="requirements__item l-col2" href="#fukui">
+							<a class="infoBtn__link" href="#fukui">
+								<button class="infoBtn light_pink_border bgc_light_white">
+									<span class="infoBtn__txt">福井で働く</span>
+								</button>
+							</a>
+						</li>
+						<li class="requirements__item l-col2" href="#yokohama">
+							<a class="infoBtn__link" href="#yokohama">
+								<button class="infoBtn light_pink_border bgc_light_white">
+									<span class="infoBtn__txt">横浜で働く</span>
+								</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="requirements__patternList">
+				<li class="requirements__patternItem" id="newGraduate">
+					<div class="requirements__head bgc_thin_pink">
+						<div class="requirements__head__wrapper l-inner">
+							<h2 class="requirements__ttl">新卒採用</h2>
+							<a class="requirements__toTxt power_blue" href="#career"><p>キャリア採用はこちら</p></a>
+						</div>
+					</div>
+					<div class="l-inner">
+						<ul class="requirements__body">
+							<li class="detail__border">
+								<ul>
+									<li class="slideDetailBtn l-wrapper">
+										<p class="slideDetailBtn__ttl">介護職員</p>
+										<button class="slideDetailBtn__btn bgc_light_pink">
+											<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+										</button>
+									</li>
+									<li class="detail__wrapper">
+										<dl class="detail isOpen layer">
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">業務内容</dt>
+												<dd class="detail__txt">
+													<p>入居者およびご家族との連絡業務、医療機関への諸手続き等</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">勤務時間</dt>
+												<dd class="detail__txt">
+													<p>8：45〜17：45 (実働8時間00分)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">給与<br>(月額)</dt>
+												<dd class="detail__txt">
+													<p>専門学校(3年) 初年度　177,200円</p>
+													<p>大学卒　初年度　184,400円</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">昇給</dt>
+												<dd class="detail__txt">
+													<p>年1回(4月)</p>
+													<p>2,500円(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">賞与</dt>
+												<dd class="detail__txt">
+													<p>年2回(6月,12月)</p>
+													<p>計3.8ヶ月(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">年間休日</dt>
+												<dd class="detail__txt">
+													<p>109日</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">採用担当者</dt>
+												<dd class="detail__txt">
+													<p>山崎　正博</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/tel.gif" alt="">
+														<img class="forSp" src="assets/images/tel_sp.gif" alt="">
+														<span class="detail__subTxt">電話：0776-41-8400</span>
+													</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/fax.gif" alt="">
+														<img class="forSp" src="assets/images/fax_sp.gif" alt="">
+														<span class="detail__subTxt">FAX：0776-41ー8401</span>
+													</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">備考</dt>
+												<dd class="detail__txt">
+													<p>社会福祉主事(任用)資格取得見込</p>
+													<p>介護福祉士資格取得見込</p>
+												</dd>
+											</div>
+										</dl>
+									</li>
+								</ul>
+							</li>
+							<li class="detail__border">
+								<ul>
+									<li class="slideDetailBtn l-wrapper">
+										<p class="slideDetailBtn__ttl">生活相談員</p>
+										<button class="slideDetailBtn__btn bgc_light_pink">
+											<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+										</button>
+									</li>
+									<li class="detail__wrapper">
+										<dl class="detail isOpen layer">
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">業務内容</dt>
+												<dd class="detail__txt">
+													<p>入居者およびご家族との連絡業務、医療機関への諸手続き等</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">勤務時間</dt>
+												<dd class="detail__txt">
+													<p>8：45〜17：45 (実働8時間00分)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">給与<br>(月額)</dt>
+												<dd class="detail__txt">
+													<p>専門学校(3年) 初年度　177,200円</p>
+													<p>大学卒　初年度　184,400円</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">昇給</dt>
+												<dd class="detail__txt">
+													<p>年1回(4月)</p>
+													<p>2,500円(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">賞与</dt>
+												<dd class="detail__txt">
+													<p>年2回(6月,12月)</p>
+													<p>計3.8ヶ月(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">年間休日</dt>
+												<dd class="detail__txt">
+													<p>109日</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">採用担当者</dt>
+												<dd class="detail__txt">
+													<p>山崎　正博</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/tel.gif" alt="">
+														<img class="forSp" src="assets/images/tel_sp.gif" alt="">
+														<span class="detail__subTxt">電話：0776-41-8400</span>
+													</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/fax.gif" alt="">
+														<img class="forSp" src="assets/images/fax_sp.gif" alt="">
+														<span class="detail__subTxt">FAX：0776-41ー8401</span>
+													</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">備考</dt>
+												<dd class="detail__txt">
+													<p>社会福祉主事(任用)資格取得見込</p>
+													<p>介護福祉士資格取得見込</p>
+												</dd>
+											</div>
+										</dl>
+									</li>
+								</ul>
+							</li>
+							<li class="detail__border">
+								<ul>
+									<li class="slideDetailBtn l-wrapper">
+										<p class="slideDetailBtn__ttl">事務員</p>
+										<button class="slideDetailBtn__btn bgc_light_pink">
+											<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+										</button>
+									</li>
+									<li class="detail__wrapper">
+										<dl class="detail isOpen layer">
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">業務内容</dt>
+												<dd class="detail__txt">
+													<p>入居者およびご家族との連絡業務、医療機関への諸手続き等</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">勤務時間</dt>
+												<dd class="detail__txt">
+													<p>8：45〜17：45 (実働8時間00分)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">給与<br>(月額)</dt>
+												<dd class="detail__txt">
+													<p>専門学校(3年) 初年度　177,200円</p>
+													<p>大学卒　初年度　184,400円</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">昇給</dt>
+												<dd class="detail__txt">
+													<p>年1回(4月)</p>
+													<p>2,500円(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">賞与</dt>
+												<dd class="detail__txt">
+													<p>年2回(6月,12月)</p>
+													<p>計3.8ヶ月(平成26年度見込)</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">年間休日</dt>
+												<dd class="detail__txt">
+													<p>109日</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">採用担当者</dt>
+												<dd class="detail__txt">
+													<p>山崎　正博</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/tel.gif" alt="">
+														<img class="forSp" src="assets/images/tel_sp.gif" alt="">
+														<span class="detail__subTxt">電話：0776-41-8400</span>
+													</p>
+													<p class="detail__icon">
+														<img class="forPc" src="assets/images/fax.gif" alt="">
+														<img class="forSp" src="assets/images/fax_sp.gif" alt="">
+														<span class="detail__subTxt">FAX：0776-41ー8401</span>
+													</p>
+												</dd>
+											</div>
+											<div class="detail__item light_black_border">
+												<dt class="detail__ttl bgc_light_black">備考</dt>
+												<dd class="detail__txt">
+													<p>社会福祉主事(任用)資格取得見込</p>
+													<p>介護福祉士資格取得見込</p>
+												</dd>
+											</div>
+										</dl>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="requirements__footer">
+							<div class="requirements__item light_blue_border bgc_light_white">
+								<p class="requirements__txt light_blue"><i class="requirements__pdfIcon fas fa-file-pdf"></i>募集要項の詳細を見る(PDF)</p>
+							</div>
+							<button class="infoBtn bgc_accent_blue">
+								<a class="infoBtn__link" href="#entry">
+									<span class="infoBtn__txt light_white">エントリー、<br class="forSp">お問合わせはこちら</span>
+								</a>
+							</button>
+							<div class="requirements__item">
+								<a href="#">
+									<p class="requirements__footer__txt light_black">リクナビをご利用の方</p>
+									<div class="requirements__footer__thumb">
+										<img src="assets/images/rikunabi_logo.gif" alt="">
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="requirements__patternItem" id="career">
+					<div class="requirements__head bgc_thin_pink">
+						<div class="requirements__head__wrapper l-inner">
+							<h2 class="requirements__ttl">キャリア採用</h2>
+							<a class="requirements__toTxt power_blue" href="#newGraduate"><p>新卒採用はこちら</p></a>
+						</div>
+					</div>
+					<div class="l-inner">
+						<div class="requirements__body">
+							<div class="requirements__mainContents">
+								<p class="requirements__subTtl" id="fukui"><span class="requirements__mapIcon"><img src="assets/images/mapIcon.gif" alt=""></span>福井ではたらく</p>
+								<dl class="detail">
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">勤務時間</dt>
+											<dd class="detail__txt">
+												<p>実働8時間00分</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">昇給</dt>
+											<dd class="detail__txt">
+												<p>年１回(4月)2,500円(平成26年度見込)</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">賞与</dt>
+											<dd class="detail__txt">
+												<p>年２回(6月,12月)</p>
+												<p>計3.８ヶ月(平成２６年度見込)</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">年間休日</dt>
+											<dd class="detail__txt">
+												<p>109日</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">採用担当者</dt>
+											<dd class="detail__txt">
+												<p>山崎　正博</p>
+												<p class="detail__icon">
+													<img class="forPc" src="assets/images/tel.gif" alt="">
+													<img class="forSp" src="assets/images/tel_sp.gif" alt="">
+													<span class="detail__subTxt">電話：0776-41-8400</span>
+												</p>
+												<p class="detail__icon">
+													<img class="forPc" src="assets/images/fax.gif" alt="">
+													<img class="forSp" src="assets/images/fax_sp.gif" alt="">
+													<span class="detail__subTxt fax">FAX：0776-41ー8401</span>
+												</p>
+											</dd>
+										</div>
+									</div>
+								</dl>
+							</div>
+							<div class="requirements__subContents">
+								<p class="requirements__subTtl">福井エリアで募集中の職種</p>
+								<ul>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">介護職員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">施設種別</dt>
+															<dd class="detail__txt">
+																<p>入居、通所</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>(1)8：30〜17：30</p>
+																<p>(1)8：45〜17：45</p>
+																<p>(1)9：00〜18：00</p>
+																<p>シフト制　実働8時間00分</p>
+																<p>※夜勤はありません</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>【入居】</p>
+																<p>社会福祉士または社会福祉主事、<br>経験者優遇</p>
+																<p>【通所】</p>
+																<p>社会福祉士、社会福祉主事、<br>介護福祉士のうちいずれか、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>190,000円〜299,000円(手当等含む)</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">介護専門支援員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員、契約社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>交替勤(夜勤有り)</p>
+																<p>シフト制：実働8時間00分</p>
+																<p>夜勤手当：5000円／回(月４回程度)</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>不問。未経験者歓迎、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>180,000円〜240,000円</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">看護職員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員、契約社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>交替勤(夜勤有り)</p>
+																<p>シフト制：実働8時間00分</p>
+																<p>夜勤手当：5000円／回(月４回程度)</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>不問。未経験者歓迎、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>180,000円〜240,000円</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="requirements__mainContents">
+								<p class="requirements__subTtl" id="yokohama"><span class="requirements__mapIcon"><img src="assets/images/mapIcon.gif" alt=""></span>横浜ではたらく</p>
+								<dl class="detail">
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">勤務時間</dt>
+											<dd class="detail__txt">
+												<p>実働8時間00分</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">昇給</dt>
+											<dd class="detail__txt">
+												<p>年１回(4月)2,500円(平成26年度見込)</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">賞与</dt>
+											<dd class="detail__txt">
+												<p>年２回(6月,12月)</p>
+												<p>計3.８ヶ月(平成２６年度見込)</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">年間休日</dt>
+											<dd class="detail__txt">
+												<p>109日</p>
+											</dd>
+										</div>
+									</div>
+									<div class="detail__item light_black_border">
+										<div class="detail__item__inner">
+											<dt class="detail__ttl">採用担当者</dt>
+											<dd class="detail__txt">
+												<p>山崎　正博</p>
+												<p class="detail__icon">
+													<img class="forPc" src="assets/images/tel.gif" alt="">
+													<img class="forSp" src="assets/images/tel_sp.gif" alt="">
+													<span class="detail__subTxt">電話：0776-41-8400</span>
+												</p>
+												<p class="detail__icon">
+													<img class="forPc" src="assets/images/fax.gif" alt="">
+													<img class="forSp" src="assets/images/fax_sp.gif" alt="">
+													<span class="detail__subTxt">FAX：0776-41ー8401</span>
+												</p>
+											</dd>
+										</div>
+									</div>
+								</dl>
+							</div>
+							<div class="requirements__subContents">
+								<p class="requirements__subTtl">横浜エリアで募集中の職種</p>
+								<ul>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">介護職員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">施設種別</dt>
+															<dd class="detail__txt">
+																<p>入居、通所</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>(1)8：30〜17：30</p>
+																<p>(1)8：45〜17：45</p>
+																<p>(1)9：00〜18：00</p>
+																<p>シフト制　実働8時間00分</p>
+																<p>※夜勤はありません</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>【入居】</p>
+																<p>社会福祉士または社会福祉主事、<br>経験者優遇</p>
+																<p>【通所】</p>
+																<p>社会福祉士、社会福祉主事、<br>介護福祉士のうちいずれか、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>190,000円〜299,000円(手当等含む)</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">生活相談員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">施設種別</dt>
+															<dd class="detail__txt">
+																<p>入居、通所</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>(1)8：30〜17：30</p>
+																<p>(1)8：45〜17：45</p>
+																<p>(1)9：00〜18：00</p>
+																<p>シフト制　実働8時間00分</p>
+																<p>※夜勤はありません</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>【入居】</p>
+																<p>社会福祉士または社会福祉主事、<br>経験者優遇</p>
+																<p>【通所】</p>
+																<p>社会福祉士、社会福祉主事、<br>介護福祉士のうちいずれか、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>190,000円〜299,000円(手当等含む)</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">介護支援専門員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">施設種別</dt>
+															<dd class="detail__txt">
+																<p>入居、通所</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>(1)8：30〜17：30</p>
+																<p>(1)8：45〜17：45</p>
+																<p>(1)9：00〜18：00</p>
+																<p>シフト制　実働8時間00分</p>
+																<p>※夜勤はありません</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>【入居】</p>
+																<p>社会福祉士または社会福祉主事、<br>経験者優遇</p>
+																<p>【通所】</p>
+																<p>社会福祉士、社会福祉主事、<br>介護福祉士のうちいずれか、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>190,000円〜299,000円(手当等含む)</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+									<li class="detail__border l-col2">
+										<ul>
+											<li class="slideDetailBtn l-wrapper">
+												<p class="slideDetailBtn__ttl">看護職員</p>
+												<button class="slideDetailBtn__btn bgc_light_pink">
+													<span class="slideDetailBtn__subTxt light_white">詳細</span><i class="slideDetailBtn__arrow fas fa-angle-down base_white"></i>
+												</button>
+											</li>
+											<li class="detail__wrapper">
+												<dl class="detail isOpen">
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">施設種別</dt>
+															<dd class="detail__txt">
+																<p>入居、通所</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務形態</dt>
+															<dd class="detail__txt">
+																<p>正社員</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">勤務時間</dt>
+															<dd class="detail__txt">
+																<p>(1)8：30〜17：30</p>
+																<p>(1)8：45〜17：45</p>
+																<p>(1)9：00〜18：00</p>
+																<p>シフト制　実働8時間00分</p>
+																<p>※夜勤はありません</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">資格</dt>
+															<dd class="detail__txt">
+																<p>【入居】</p>
+																<p>社会福祉士または社会福祉主事、<br>経験者優遇</p>
+																<p>【通所】</p>
+																<p>社会福祉士、社会福祉主事、<br>介護福祉士のうちいずれか、経験者優遇</p>
+															</dd>
+														</div>
+													</div>
+													<div class="detail__item">
+														<div class="detail__item__inner">
+															<dt class="detail__ttl">給与</dt>
+															<dd class="detail__txt">
+																<p>190,000円〜299,000円(手当等含む)</p>
+															</dd>
+														</div>
+													</div>
+												</dl>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="section" id="education">
+			<div class="l-inner">
+				<div class="heading">
+					<h1 class="heading__main">人材育成</h1>
+					<p class="heading__sub lato">education</p>
+				</div>
+				<div class="section__thumb">
+					<img class="forPc" src="assets/images/education_pc_01.jpg" alt="">
+					<img class="forSp" src="assets/images/education_sp_02.jpg" alt="">
+				</div>
+				<div>
+					<p class="section__supplement">全職員を対象に行う毎月１回の『法人内職員研修会』のほか、新規採用職員向けの研修を開催し、現場で必要な知識を学びます。</p>
+				</div>
+				<div class="section__table" id="tab">
+					<ul class="tab__wrapper">
+						<li class="tab light_black_border bgc_light_white">
+							<a class="tab__txt power_blue" href="#detail1">法人内職員研修計画(平成28年度)</a>
+							<span class="tab__border"></span>
+						</li>
+						<li class="tab light_black_border bgc_light_white">
+							<a class="tab__txt power_blue" href="#detail2">新規採用職員研修計画</a>
+							<span class="tab__border"></span>
+						</li>
+						<li class="tab light_black_border bgc_light_white">
+							<a class="tab__txt power_blue" href="#detail3">施設外研修(県外)(平成27年度)</a>
+							<span class="tab__border"></span>
+						</li>
+					</ul>
+					<div class="tab__panels">
+						<div class="tab__panel" id="detail1">
+							<ul class="tab__detail l-left">
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">4月</p>
+									<p class="tab__detail__txt">『施設運営理念、事業紹介、特養とリパの違い等について』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">5月</p>
+									<p class="tab__detail__txt">『認知症のケアの基本』</p>
+									<p class="tab__detail__txt">『入浴・排泄介助時のプライバシーについて』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">6月</p>
+									<p class="tab__detail__txt">『事故防止対策』『ヒヤリハット・事例検討』</p>
+									<p class="tab__detail__txt">『食中毒予防・ユニットでの食品衛生管理について』</p>
+									<p class="tab__detail__txt">『食中毒発生時の事例検討』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">7月</p>
+									<p class="tab__detail__txt">『医療管理体制について』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">8月</p>
+									<p class="tab__detail__txt">『体拘束いついて』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">9月</p>
+									<p class="tab__detail__txt">『週末期における入居者及び家族への精神的ケアについて』</p>
+								</li>
+							</ul>
+							<ul class="tab__detail l-right">
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">10月</p>
+									<p class="tab__detail__txt">『認知症のケアについて』</p>
+									<p class="tab__detail__txt">『権利擁護について』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">11月</p>
+									<p class="tab__detail__txt">『冬季に流行する感染症について』</p>
+									<p class="tab__detail__txt">『身体拘束廃止に向けて』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">12月</p>
+									<p class="tab__detail__txt">『在宅サービスについて』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">1月</p>
+									<p class="tab__detail__txt">『福祉制度について』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">2月</p>
+									<p class="tab__detail__txt">『福祉労働の専門性について』</p>
+								</li>
+								<li class="tab__detail__item">
+									<p class="tab__detail__ttl light_blue">3月</p>
+									<p class="tab__detail__txt">『法人の事業内容を理解する』</p>
+								</li>
+							</ul>
+						</div>
+						<div class="tab__panel" id="detail2">
+							<div class="tab__detail__wrapper">
+								<p class="tab__detail__head">施設外研修(県外)(平成27年度)</p>
+							</div>
+							<dl class="tab__detail l-left">
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">ユニットリーダー研修(前期)</dt>
+									<dd class="tab__detail__txt">開催地：名古屋市　ウインクあいち</dd>
+								</div>
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">ユニットリーダー研修(後期)</dt>
+									<dd class="tab__detail__txt">開催地：大阪府堺市　堺市産業振興センター</dd>
+								</div>
+							</dl>
+							<dl class="tab__detail l-right">
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">全国個室ユニット型施推進協議会全国大会</dt>
+									<dd class="tab__detail__txt">仙台市　江陽グランドホテル</dd>
+								</div>
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">社会福祉法人研修会</dt>
+									<dd class="tab__detail__txt">大阪市　近畿厚生局</dd>
+								</div>
+							</dl>
+						</div>
+						<div class="tab__panel" id="detail3">
+							<div class="tab__detail__wrapper">
+								<p class="tab__detail__head">施設外研修(県外)(平成27年度)</p>
+							</div>
+							<dl class="tab__detail l-left">
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">ユニットリーダー研修(前期)</dt>
+									<dd class="tab__detail__txt">開催地：名古屋市　ウインクあいち</dd>
+								</div>
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">ユニットリーダー研修(後期)</dt>
+									<dd class="tab__detail__txt">開催地：大阪府堺市　堺市産業振興センター</dd>
+								</div>
+							</dl>
+							<dl class="tab__detail l-right">
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">全国個室ユニット型施推進協議会全国大会</dt>
+									<dd class="tab__detail__txt">仙台市　江陽グランドホテル</dd>
+								</div>
+								<div class="tab__detail__item">
+									<dt class="tab__detail__ttl">社会福祉法人研修会</dt>
+									<dd class="tab__detail__txt">大阪市　近畿厚生局</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slideshow__wrapper">
+				<div class="slideshow">
+					<ul class="slideshow__slides" id="educationSlide">
+						<li class="slideshow__slide education"><img src="assets/images/education/education_thumb_01.jpg" alt=""></li>
+						<li class="slideshow__slide education"><img src="assets/images/education/education_thumb_02.jpg" alt=""></li>
+						<li class="slideshow__slide education"><img src="assets/images/education/education_thumb_03.jpg" alt=""></li>
+						<li class="slideshow__slide education"><img src="assets/images/education/education_thumb_04.jpg" alt=""></li>
+						<li class="slideshow__slide education"><img src="assets/images/education/education_thumb_05.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section bgc_light_white" id="entry">
+			<div class="l-inner">
+				<div class="heading">
+					<h1 class="heading__main">エントリー・資料請求</h1>
+					<p class="heading__sub lato">entry</p>
+				</div>
+				<div class="entrySheet">
+					<div class="entrySheet__inner">
+						<form class="entrySheet__form" action="" >
+							<ul class="entrySheet__list">
+								<li class="entrySheet__item">
+									<label class="entrySheet__ttl" for="name1">お名前</label><span class="entrySheet__attention power_pink">必須</span>
+									<input class="entrySheet__txtArea" type="text" name="name" value="" id="name1">
+								</li>
+								<li class="entrySheet__item">
+									<label class="entrySheet__ttl" for="name2">フリガナ</label><span class="entrySheet__attention power_pink">必須</span>
+									<input class="entrySheet__txtArea" type="text" name="name" value="" id="name2">
+								</li>
+								<li class="entrySheet__item">
+									<label class="entrySheet__ttl" for="mail">メールアドレス</label><span class="entrySheet__attention power_pink">必須</span>
+									<input class="entrySheet__txtArea" type="email" name="mail" value="" id="mail">
+								</li>
+								<li class="entrySheet__item">
+									<label class="entrySheet__ttl" for="tel">電話番号</label><span class="entrySheet__attention power_pink">必須</span>
+									<input class="entrySheet__txtArea" type="tel" name="" value="" id="tel">
+								</li>
+								<li class="entrySheet__item">
+									<label class="entrySheet__ttl" class="entrySheet__address" for="address">住所</label><span class="entrySheet__attention power_pink">必須</span><br>
+									<div class="entrySheet__addressNumber">
+										<span class="entrySheet__addressIcon"><img src="assets/images/address.gif" alt="郵便番号"></span>
+										<input class="entrySheet__txtArea" type="text" name="addressNumber" value="" id="address">
+									</div>
+									<input class="entrySheet__txtArea" type="text" name="address" value="">
+								</li>
+								<li class="entrySheet__item">
+									<p class="entrySheet__ttl l-left">希望エリア</p>
+									<div class="entrySheet__checkList">
+										<label class="entrySheet__checkBox" for="check1"><input class="" type="checkbox" name="area" value="" id="check1">&ensp;福井</label>
+										<label class="entrySheet__checkBox" for="check2"><input class="" type="checkbox" name="area" value="" id="check2">&ensp;横浜</label>
+									</div>
+								</li>
+								<li class="entrySheet__item">
+									<label  class="entrySheet__ttl" for="select">希望職種</label>
+									<select class="entrySheet__txtArea bgc_light_white" name="select" id="select">
+										<option value="介護職員">介護職員</option>
+										<option value="生活相談員">生活相談員</option>
+										<option value="介護支援専門員">介護支援専門員</option>
+										<option value="看護職員">看護職員</option>
+									</select>
+								</li>
+								<li class="entrySheet__item">
+										<label  class="entrySheet__ttl" for="other">備考</label>
+										<textarea class="entrySheet__txtArea" type="text" placeholder="就職希望やご質問があればお書きください。" name="message" cols="20"  rows="4" value="" id="other"></textarea>
+									</p>
+								</li>
+							</ul>
+						</form>
+						<div class="entrySheet__submit">
+							<button class="infoBtn accent_blue_border bgc_light_white">
+								<span class="infoBtn__txt">入力内容を確認する</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
+	<footer class="footer">
+		<h2 class="footer__heading">社会福祉法人　一乗谷友愛会</h2>
+		<p class="footer__address">福井県福井市下六条町18-32</p>
+		<div class="footer__btn">
+			<button class="infoBtn bgc_light_pink">
+				<a href="#">
+					<span class="infoBtn__txt light_white">法人サイトはこちら</span><span class="infoBtn__window"><img src="assets/images/shape_window.gif" alt=""></span>
+				</a>
+			</button>
+		</div>
+		<p class="footer__copyright bgc_power_blue light_white">&copy;2018 asakuragroup</p>
+	</footer>
 </body>
 </html>

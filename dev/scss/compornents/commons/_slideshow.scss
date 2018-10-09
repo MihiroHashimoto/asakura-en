@@ -1,0 +1,7 @@
+.slideshow {
+	&__slide.education {
+		@include mq(nonSp) {
+			max-width: 300px;
+		}
+	}
+}
